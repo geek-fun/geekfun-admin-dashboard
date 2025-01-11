@@ -9,11 +9,11 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      redirect: '/dashboard/home',
+      path: '/views',
+      redirect: '/views/dashboard/home',
     },
     {
-      path: '/login',
+      path: '/views/login',
       name: 'login',
       component: () => import('@/views/Login.vue'),
       meta: {
@@ -21,9 +21,9 @@ const router = createRouter({
       } as RouteMeta & IRouteMeta,
     },
     {
-      path: '/dashboard',
+      path: '/views/dashboard',
       component: DashboardLayoutVue,
-      redirect: '/dashboard/home',
+      redirect: '/views/dashboard/home',
       meta: {
         title: 'Dashboard',
       },
@@ -63,7 +63,7 @@ const router = createRouter({
       ],
     },
     {
-      path: '/:pathMatch(.*)',
+      path: '/views/:pathMatch(.*)',
       name: 'not-found',
       component: () => import('@/views/404.vue'),
       meta: {

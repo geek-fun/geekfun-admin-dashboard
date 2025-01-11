@@ -139,7 +139,7 @@ const toggleSidebar = () => {
                     <TooltipTrigger class="w-full">
                       <Toggle
                         class="w-full overflow-x-hidden justify-start duration-150"
-                        @click="$router.push('/login')"
+                        @click="$router.push('/views/login')"
                       >
                         <span class="flex items-center" :class="store.sidebarExpanded ? 'mr-4' : 'm-0'">
                           <Icon name="LogIn" />
